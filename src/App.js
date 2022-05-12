@@ -5,6 +5,7 @@ import Inicio from "./componentes/inicio";
 import Blog from "./componentes/blog";
 import Post from "./componentes/post";
 import AcercaDe from "./componentes/acercaDe";
+import Error404 from "./componentes/error404";
 import styled from "styled-components";
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
         <Header />
         <Main>
           <Routes>
+            <Route path="*" element={<Error404/>} />
             <Route path="/" element={<Inicio/>} />
             <Route path="/blog" element={<Blog/>} />
             <Route path="/post/:id" element={<Post/>} />
